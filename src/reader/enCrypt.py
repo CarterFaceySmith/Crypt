@@ -42,3 +42,5 @@ def makeKeyFiles(filename, keyBuffer):
     outfile = open('%s_privkey.txt' % (filename), 'w')
     outfile.write('%s,%s,%s' % (keyBuffer, privKey[0], privKey[1]))
     outfile.close()
+
+    print("Public and private keys files successfully created.")
