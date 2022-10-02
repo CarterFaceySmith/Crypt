@@ -11,7 +11,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-https://user-images.githubusercontent.com/43100930/193440440-cb5f9639-753f-4a3f-97ba-04da2fcfe3b3.mp4
+![logo](https://user-images.githubusercontent.com/43100930/193440676-8f3970d0-4272-462f-8d72-f33969fd1646.gif)
 
 <h3 align="center">project_title</h3>
 
