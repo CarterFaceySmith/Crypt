@@ -1,5 +1,5 @@
 # Imports
-import socket, threading, enCrypt
+import socket, threading
 from cryptography.fernet import Fernet
 
 # Program settings

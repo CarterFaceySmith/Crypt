@@ -1,5 +1,5 @@
 # Imports
-import socket, threading, enCrypt, base64
+import socket, threading, base64
 from cryptography.fernet import Fernet
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC

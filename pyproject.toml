@@ -7,13 +7,15 @@ license = "MIT"
 readme = "README.md"
 
 packages = [
-    { include = "*", from = "lib" },
+    { include = "*", from = "src" },
 ]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10"
 cryptography = "^38.0.1"
 
+[tool.poetry.scripts]
+start = "main:main"
 
 [build-system]
 requires = ["poetry-core"]
