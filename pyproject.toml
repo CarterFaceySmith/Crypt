@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "crypt"
+name = "Crypt"
 version = "0.1.0"
 description = "A peer-to-peer encrypted command line chatroom."
 authors = ["CarterFaceySmith <carterfaceysmith@gmail.com>"]
@@ -8,6 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"
+cryptography = "^38.0.1"
 
 
 [build-system]
