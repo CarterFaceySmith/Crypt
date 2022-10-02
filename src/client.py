@@ -1,49 +1,53 @@
 # Imports
 import socket, threading, enCrypt
+from cryptography.fernet import Fernet
 
 # Program settings
 bufferSize = 1024
+host = '127.0.0.1'
+port = 7979
 
 # Initialisation
-host = '127.0.0.1'
-port = 8888
-alias = 'librarian'
 # host = input('Input host IP to connect to:\n> ')
 # print()
 # port = int(input('Input host port to connect to:\n> '))
 # print()
-# cipher = input('Input host cipher key:\n> ')
-# print()
-serverPW = input('Input server password:\n> ')
+cipher_raw = input('Input server password:\n> ')
 
 # Connect to server
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)      
 client.connect((host, port))
-client.send(serverPW.encode('ascii'))
+client.send(cipher_raw.encode('ascii'))
+
+publicKey = client.recv(bufferSize)
+print(publicKey)
+fernet = Fernet(publicKey)
+
 verified = client.recv(bufferSize).decode('ascii')
+verified = fernet.decrypt(verified).decode()
+
 if verified == "VERIFIED":
     print("Connected to the server successfully.")
 else:
     print("The password is incorrect.")
     exit()
 
-# alias = input('Input your alias:\n> ')
-# print()
-print('Your alias is set to {}.\n', alias)
+alias = input('Input your alias:\n> ')
+print()
+print('Your alias is set to {}.\n'.format(alias))
 print("To exit to program, enter \'exit\' at any point.")
-
 
 # FUNCTIONS
 def receive():
-    #TODO: Currently vulnerable to segfaults in threading if the server stops whilst user is active
     while True:                                                 
         try:
-            message = client.recv(bufferSize).decode('ascii')
+            message = client.recv(bufferSize)
+            message = fernet.decrypt(message).decode('ascii')
             if message == 'NICKNAME':
-                client.send(alias.encode('ascii')) 
-                #TODO: Vulnerable to people inputting NICKNAME to get the server to spam everyones nicknames
+                client.send(fernet.encrypt(alias.encode('ascii'))) 
             else:
                 print(message)
+
         except:                                                 
             print("An error occured.\nExiting the program.")
             client.close()

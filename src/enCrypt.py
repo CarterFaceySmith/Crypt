@@ -1,3 +1,6 @@
+# Set pubKey via server set password and hash
+# When user connects with correct password, send them publicKey for encrypt and decrypt and set in their code
+
 # Imports
 import random, sys, os, rabinMiller, theMath
 
