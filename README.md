@@ -11,11 +11,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/carterfaceysmith/Crypt">
     <video width="80" height="80">
     <source src="resources/logoGif.mp4">
     </video>
-  </a>
 
 <h3 align="center">project_title</h3>
 
