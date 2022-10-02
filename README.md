@@ -11,9 +11,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <video width="80" height="80">
-    <source src="resources/logoGif.mp4">
-    </video>
+https://user-images.githubusercontent.com/43100930/193440440-cb5f9639-753f-4a3f-97ba-04da2fcfe3b3.mp4
 
 <h3 align="center">project_title</h3>
 
