@@ -10,16 +10,15 @@ encryption = False
 title = "\n   ______                 __ \n  / ____/______  ______  / /_\n / /   / ___/ / / / __ \/ __/\n/ /___/ /  / /_/ / /_/ / /_  \n\____/_/   \__, / .___/\__/  \n          /____/_/           \n\n"
 verification = 'VERIFIED'
 nickname = 'NICKNAME'
-
 host = '127.0.0.1'
 port = 7979
 
 # Initialisation
 print(title)
-# host = input('Input host IP to set (default = 127.0.0.1):\n> ')
-# print()
-# port = int(input('Input host port to set:\n> '))
-# print()
+host = input('Input host IP to set (default = 127.0.0.1):\n> ')
+print()
+port = int(input('Input host port to set (default = 7979):\n> '))
+print()
 
 # Key setup
 cipher_raw = input('Input server access password to set:\n> ')

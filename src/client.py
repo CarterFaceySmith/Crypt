@@ -4,14 +4,12 @@ from cryptography.fernet import Fernet
 
 # Program settings
 bufferSize = 1024
-host = '127.0.0.1'
-port = 7979
 
 # Initialisation
-# host = input('Input host IP to connect to:\n> ')
-# print()
-# port = int(input('Input host port to connect to:\n> '))
-# print()
+host = input('Input host IP to connect to:\n> ')
+print()
+port = int(input('Input host port to connect to:\n> '))
+print()
 cipher_raw = input('Input server password:\n> ')
 
 # Connect to server

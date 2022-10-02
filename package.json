@@ -1,0 +1,25 @@
+{
+  "name": "@carterfaceysmith/thecrypt",
+  "version": "0.1.1",
+  "description": "A peer-to-peer encrypted command line chatroom",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carterfaceysmith/Crypt.git"
+  },
+  "keywords": [
+    "encryption",
+    "chat",
+    "commandline",
+    "python"
+  ],
+  "author": "CarterFaceySmith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carterfaceysmith/Crypt/issues"
+  },
+  "homepage": "https://github.com/carterfaceysmith/Crypt#readme"
+}
