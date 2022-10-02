@@ -3,22 +3,20 @@ import socket, threading, enCrypt
 
 # Program settings
 bufferSize = 1024
-title = 'CRYPT'
+title = "\n   ______                 __ \n  / ____/______  ______  / /_\n / /   / ___/ / / / __ \/ __/\n/ /___/ /  / /_/ / /_/ / /_  \n\____/_/   \__, / .___/\__/  \n          /____/_/           \n\n"
 host = '127.0.0.1'
 port = 8888
 
 # Initialisation
-print('Welcome to...\n')
 print(title)
-print()
-print()
 # host = input('Input host IP to set (default = 127.0.0.1):\n> ')
 # print()
 # # port = int(input('Input host port to set:\n> '))
 # print()
-# cipherTitle = input("Input name for cipher key files:\n> ")
+# cipherTitle = input('Input name for cipher key files:\n> /)
 # print("Beginning cipher generation.\n")
 # enCrypt.makeKeyFiles(cipherTitle, bufferSize)
+# serverPW = input('Input server access password to set:\n> ')
 
 # Socket and server
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -61,11 +59,9 @@ def handle(client):
 
 def receive():                                                          
     while True:
-        # serverIn = input('')
-        # if serverIn == 'end':
-        #     exit()
         print("Server active at {} on port {}".format(host, port))
         client, address = server.accept()
+        # Get next msg and authenticate password or deny access
         print("User connected with {}".format(str(address)))       
         client.send('NICKNAME'.encode('ascii'))
         alias = client.recv(bufferSize).decode('ascii')

@@ -1,5 +1,5 @@
 # Imports
-import socket, threading, sys, enCrypt
+import socket, threading, enCrypt
 
 # Program settings
 bufferSize = 1024
@@ -14,11 +14,18 @@ alias = 'librarian'
 # print()
 # cipher = input('Input host cipher key:\n> ')
 # print()
+serverPW = input('Input server password:\n> ')
 
 # Connect to server
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)      
 client.connect((host, port))
-print("Connected to the server successfully.")
+client.send(serverPW.encode('ascii'))
+verified = client.recv(bufferSize).decode('ascii')
+if verified == "VERIFIED":
+    print("Connected to the server successfully.")
+else:
+    print("The password is incorrect.")
+    exit()
 
 # alias = input('Input your alias:\n> ')
 # print()
