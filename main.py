@@ -1,15 +1,14 @@
-import src, sys
+import src.server, src.client
 
 def main():
-    args = sys.argv
-    if len(args) > 1:
-        if args[1] == "server":
-                exec(open("./src/server.py").read())
-        elif args[1] == "client":
-                exec(open("./src/client.py").read())
+    selection = input("Run program as a:\n1. Server\n2. Client\n> ")
+    if (selection == "1"):
+        src.server.main()
+    elif (selection == "2"):
+        src.client.main()
     else:
-        print("No program flag specified, exiting.")
-        exit()
+        print("Invalid selection.")
+        main()
 
 if __name__ == '__main__':
    main()
