@@ -32,9 +32,10 @@ def main():
 
     # Socket and server
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    # server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server.bind((host, port))
     print("Bound server instance on {} at port {}". format(host, port))
-    server.listen()
+    server.listen(50)
     print("Server started successfully.")
     print("Input \'end\' to shutdown the server at any point.")
 

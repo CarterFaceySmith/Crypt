@@ -1,6 +1,6 @@
 {
   "name": "@carterfaceysmith/thecrypt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A peer-to-peer encrypted command line chatroom",
   "main": "index.js",
   "scripts": {
