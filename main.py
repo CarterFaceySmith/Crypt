@@ -1,7 +1,7 @@
 import src.server, src.client
 
 def main():
-    selection = input("Run program as a:\n1. Server\n2. Client\n> ")
+    selection = input("Run program as:\n1. Server\n2. Client\n> ")
     if (selection == "1"):
         src.server.main()
     elif (selection == "2"):
