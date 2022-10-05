@@ -3,6 +3,7 @@ import socket, threading, base64
 from cryptography.fernet import Fernet
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
+import urllib.request
 
 # Initialisation
 def main():
@@ -14,9 +15,14 @@ def main():
 
     # Initialisation
     print(title)
-    host = input('Input host IP to set:\n> ')
+    confirmation = input("Please note that operating this server exposes and utilises your current public IP address, apply caution when using this and ensure due diligence when allowing access.\nDo you wish to proceed? (Y/N)\n> ")
+    if(confirmation != "Y"):
+        print("Thank you for using Crypt. Program exiting.\n")
+        exit()
+    host = urllib.request.urlopen('https://ident.me').read().decode('utf8')
     print()
-    port = int(input('Input host port to set:\n> '))
+    print("Your server will be started on address {}\n".format(host))
+    port = int(input('Input host port to set, note the port must forward to your IP in your router configuration or the chatroom will only be accessible from the same network:\n> '))
     print()
 
     # Key setup
@@ -32,7 +38,6 @@ def main():
 
     # Socket and server
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    # server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server.bind((host, port))
     print("Bound server instance on {} at port {}". format(host, port))
     server.listen(50)
