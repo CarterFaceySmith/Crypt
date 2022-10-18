@@ -13,16 +13,13 @@
 <div align="center">
 <img src="https://user-images.githubusercontent.com/43100930/193440676-8f3970d0-4272-462f-8d72-f33969fd1646.gif" width="350" height="350" />
   
-<h3 align="center">project_title</h3>
+<h3 align="center">The Crypt</h3>
 
   <p align="center">
-    project_description
+    An opensource, enCRYPTed peer-to-peer command line chat.
     <br />
     <a href="https://github.com/carterfaceysmith/Crypt"><strong>Explore the docs »</strong></a>
     <br />
-    <br />
-    <a href="https://github.com/carterfaceysmith/Crypt">View Demo</a>
-    ·
     <a href="https://github.com/carterfaceysmith/Crypt/issues">Report Bug</a>
     ·
     <a href="https://github.com/carterfaceysmith/Crypt/issues">Request Feature</a>
@@ -45,15 +42,12 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -62,9 +56,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+After reading more into encryption and RSA, I was inspired to write up a lightweight CLI chat for use locally. Python itself makes this suprisingly easy, I'm generally not the biggest fan of the language but it definitely has its merits here.
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `carterfaceysmith`, `Crypt`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+The program can be run as a server or client instance, the server instance will bind to your IP and base itself there, meaning anyone running on the local network is able to connect if authentication is passed. Users outside the network can connect as long as you've set up port forwarding and your public IP access configuration.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -73,8 +67,6 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 ### Built With
 
 * Python
-* 
-* 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,54 +75,50 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get started, you can initialise the project from npm, poetry or this repo.
+
+### NPM
+1. Run ```npm install @carterfaceysmith/thecrypt```
+2. Run the code via ```python main.py```
+
+### Poetry
+1. Run ```poetry install theCrypt```
+2. Run the code via ```poetry crypt```
+
+### GitHub
+1. Clone this repository
+2. In the cloned directory run ```python main.py```
+
+The program will prompt you to choose whether to run as client or server, and issue you some security warnings prior to confirm if running server.
+
+Please ensure you take necessary network measures to secure yourself if running publically.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * npm
-  ```sh
-  npm install npm@latest -g
-  ```
+  ```npm install npm@latest -g```
 
-### Installation
+* poetry
+```npm install poetry@latest```
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/carterfaceysmith/Crypt.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+* cryptography module
+```pip install cryptography```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+Note that the project relies on cryptography for security and hashing, if you install via poetry or npm it should install this dependency for you.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- Feature 1
-- Feature 2
-- Feature 3
-    - Nested Feature
+- Migrate Crypt to asymmetric encryption
+- Potentially migrate Crypt to a Flask-based web interface, or give the option
+- Move from RSA-based encryption to something more secure like AES, this could be semi-overkill though
 
 See the [open issues](https://github.com/carterfaceysmith/Crypt/issues) for a full list of proposed features (and known issues).
 
@@ -141,10 +129,7 @@ See the [open issues](https://github.com/carterfaceysmith/Crypt/issues) for a fu
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+If you want to add something, let me know or feel free to contribute to this, it's a super simple and lightweight project and the aim is to keep it that way.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -160,28 +145,6 @@ Don't forget to give the project a star! Thanks again!
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [Email](mailto:carterfaceysmith@gmail.com) - email@email_client.com
-
-Project Link: [https://github.com/carterfaceysmith/Crypt](https://github.com/carterfaceysmith/Crypt)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -205,19 +168,4 @@ Godspeed.
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+
