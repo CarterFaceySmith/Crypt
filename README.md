@@ -44,7 +44,6 @@
         <li><a href="#prerequisites">Prerequisites</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -62,15 +61,11 @@ The program can be run as a server or client instance, the server instance will 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ### Built With
 
 * Python
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -106,13 +101,6 @@ Please ensure you take necessary network measures to secure yourself if running 
 
 Note that the project relies on cryptography for security and hashing, if you install via poetry or npm it should install this dependency for you.
 
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -123,8 +111,6 @@ Use this space to show useful examples of how a project can be used. Additional 
 See the [open issues](https://github.com/carterfaceysmith/Crypt/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- CONTRIBUTING -->
 ## Contributing
