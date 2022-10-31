@@ -1,7 +1,7 @@
 <h3 align="center">The Crypt</h3>
 
 <p align="center">
-  An opensource, enCRYPTed peer-to-peer command line chat.
+  Encrypted P2P CLI chat.
 </p>
 
 ## About The Project
