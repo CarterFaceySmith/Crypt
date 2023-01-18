@@ -15,11 +15,12 @@ def main():
 
     # Initialisation
     print(title)
-    confirmation = input("Please note that operating this server exposes and utilises your current public IP address, apply caution when using this and ensure due diligence when allowing access.\nDo you wish to proceed? (Y/N)\n> ")
-    if(confirmation != "Y"):
+    confirmation = input("Please note that operating this server exposes and utilises your current public IP address, apply caution when using this and ensure due diligence when allowing access.\nDo you wish to proceed? (y/n)\n> ")
+    if(confirmation != "y"):
         print("Thank you for using Crypt. Program exiting.\n")
         exit()
-    host = urllib.request.urlopen('https://ident.me').read().decode('utf8')
+    hostname = socket.gethostname()
+    host = socket.gethostbyname(hostname)
     print()
     print("Your server will be started on address {}\n".format(host))
     port = int(input('Input host port to set, note the port must forward to your IP in your router configuration or the chatroom will only be accessible from the same network:\n> '))
